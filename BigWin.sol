@@ -144,18 +144,18 @@ contract TRC20 {
 contract BigWin is WhitelistAdminRole {
 	using SafeMath for *;
 	// uint ethWei = 1 ether;
-	uint unit100     = 100 * (10 ** 6);
-	uint usd500      = 100 * (10 ** 6);
-	uint usd1000     = 1000 * (10 ** 6);
-	uint usd1100     = 1100 * (10 ** 6);
-	uint usd2000     = 2000 * (10 ** 6);
-	uint usd2100     = 2100 * (10 ** 6);
-	uint usd3000     = 3000 * (10 ** 6);
-	uint usd20000    = 20000 * (10 ** 6);
+	uint unit100     = 100 * (10 ** 18);
+	uint usd500      = 100 * (10 ** 18);
+	uint usd1000     = 1000 * (10 ** 18);
+	uint usd1100     = 1100 * (10 ** 18);
+	uint usd2000     = 2000 * (10 ** 18);
+	uint usd2100     = 2100 * (10 ** 18);
+	uint usd3000     = 3000 * (10 ** 18);
+	uint usd20000    = 20000 * (10 ** 18);
 
-	address payable private devAddr = address(0xdC2722d3Dec3566d37870986Abda531347C39e3f);
-	address payable private comfortAddr = address(0x7470AE0c6C2479838ef6010E21F9B049E45F6563);
-	address public usdtAddr = address(0x09aF39e4d5662008f6351D6011501D717020D3E5);
+	address payable private devAddr = address(0x0Ee152aB24453F32A5A3585AF68002FA87dC38eF);
+	address payable private comfortAddr = address(0x8170FC3FCb38468a28b04Cf497ffe1c12812f562);
+	address public usdtAddr = address(0x55d398326f99059fF775485246999027B3197955); // bsc usdt
 
 	struct User {
 		uint id;
@@ -208,9 +208,9 @@ contract BigWin is WhitelistAdminRole {
 	mapping(string => address) addressMapping;
 	mapping(uint => address) indexMapping;
 	mapping(uint => mapping(address => mapping(uint => AwardData))) userAwardDataMapping;
-	uint bonuslimit = 3000 * (10 ** 6); // 15 ether;
-	uint sendLimit = 20000 * (10 ** 6); // 100 ether;
-	uint withdrawLimit = 3000 * (10 ** 6); // 15 ether;
+	uint bonuslimit = 3000 * (10 ** 18); // 15 ether;
+	uint sendLimit = 20000 * (10 ** 18); // 100 ether;
+	uint withdrawLimit = 3000 * (10 ** 18); // 15 ether;
 	uint canImport = 1;
 	uint canSetStartTime = 1;
 
